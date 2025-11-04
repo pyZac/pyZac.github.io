@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saqer Terkawi — AI Bots & Automation</title>
+  <meta name="description" content="Portfolio: AI Bots, RAG pipelines, and automation projects for 6FE Platform."/>
+  <style>
+    :root{
+      --bg: #0b0d10;
+      --panel: #11151b;
+      --muted: #98a2b3;
+      --text: #e6e8eb;
+      --brand: #7c5cff;
+      --brand-2: #00d1b2;
+      --accent: #ffd166;
+      --ring: 0 0 0 3px rgba(124,92,255,.25);
+      --radius: 14px;
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+      --card: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      --glass: rgba(255,255,255,.06);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7fb; --panel:#ffffff; --text:#121417; --muted:#667085;
+        --card: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.02));
+        --glass: rgba(0,0,0,.04);
+        --shadow: 0 20px 60px rgba(10,22,70,.08);
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;
+      color:var(--text); background: radial-gradient(1200px 600px at 80% -10%, rgba(124,92,255,.18), transparent 60%),
+                             radial-gradient(900px 500px at -10% 10%, rgba(0,209,178,.15), transparent 60%),
+                             var(--bg);
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:32px 20px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:14px 16px; border-radius:var(--radius); background:var(--glass); backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+    .brand{display:flex; gap:10px; align-items:center}
+    .logo{
+      width:36px;height:36px;border-radius:10px;display:grid;place-items:center;
+      background: conic-gradient(from 180deg, var(--brand), var(--brand-2), var(--accent), var(--brand));
+      color:#0b0d10; font-weight:900
+    }
+    .brand h1{font-size:16px; margin:0}
+    .actions{display:flex; gap:8px}
+    .btn{
+      border:1px solid transparent; padding:10px 14px; border-radius:12px; font-weight:600;
+      background: var(--card); transition:.2s transform, .2s background, .2s border;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18)}
+    .btn.primary{background: linear-gradient(90deg, var(--brand), var(--brand-2)); color:#0b0d10}
+    .btn.ghost{background: transparent; border-color: rgba(255,255,255,.18)}
+    .toggle{
+      border:none; padding:10px 12px; border-radius:12px; background:var(--card); cursor:pointer
+    }
+    .hero{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; align-items:center; margin-top:32px
+    }
+    .chip{display:inline-flex; gap:8px; align-items:center; font-size:12px; color:var(--muted);
+      border:1px solid rgba(255,255,255,.16); padding:6px 10px; border-radius:20px; background:var(--glass)}
+    .title{font-size:40px; line-height:1.15; margin:14px 0 8px; letter-spacing:.2px}
+    .lead{color:var(--muted); margin:0 0 16px}
+    .hero .cta{display:flex; gap:10px; flex-wrap:wrap}
+    .panel{
+      background:var(--panel); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius); padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .grid{
+      display:grid; grid-template-columns: repeat(2,1fr); gap:18px; margin-top:28px
+    }
+    .card{
+      background: var(--card); border:1px solid rgba(255,255,255,.12); border-radius:18px; padding:18px;
+      transition:.25s transform, .25s box-shadow, .25s border; position:relative; overflow:hidden
+    }
+    .card:hover{transform:translateY(-3px); box-shadow: var(--shadow); border-color: rgba(124,92,255,.35)}
+    .pill{display:inline-block; font-size:12px; color:var(--muted); border:1px solid rgba(255,255,255,.18);
+      border-radius:999px; padding:4px 10px; margin:6px 6px 10px 0}
+    .row{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 4px}
+    .kpis{display:flex; gap:16px; margin-top:8px; color:var(--muted); font-size:13px}
+    .kpis span{display:flex; gap:6px; align-items:center}
+    .section-title{margin:36px 0 10px; font-size:20px}
+    .footer{
+      margin:36px 0 12px; color:var(--muted); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap
+    }
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:13px}
+    .tag{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px;
+      background:var(--glass); border:1px solid rgba(255,255,255,.16); color:var(--muted); font-size:12px}
+    .list{display:flex; gap:8px; flex-wrap:wrap}
+    .divider{height:1px; background:rgba(255,255,255,.12); margin:18px 0}
+    @media (max-width: 880px){
+      .hero{grid-template-columns: 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo">⚡</div>
+        <h1>Saqer Terkawi</h1>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="https://github.com/pyZac" target="_blank" rel="noopener">GitHub</a>
+        <button class="toggle" id="themeToggle" title="Toggle theme">🌓</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <span class="chip">AI Bots • RAG • Automation</span>
+        <h2 class="title">Building AI assistants & automation for the 6FE Platform</h2>
+        <p class="lead">Two production projects: an educational <span class="mono">AI Coach Bot</span> with semantic retrieval, and a <span class="mono">Subscription Manager</span> that controls Telegram group access from MySQL.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">Explore Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <span class="tag">Arabic-first</span>
+          <span class="tag">PM2 on VPS</span>
+          <span class="tag">Safe guardrails</span>
+          <span class="tag">Redis-ready</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="list">
+          <span class="tag">Node.js</span>
+          <span class="tag">Telegraf</span>
+          <span class="tag">OpenAI GPT-4o</span>
+          <span class="tag">Embeddings</span>
+          <span class="tag">Cosine search</span>
+          <span class="tag">MySQL</span>
+        </div>
+        <div class="divider"></div>
+        <p style="margin:0; color:var(--muted)">“Practical education, semantic context, robust fallbacks.”</p>
+        <div class="kpis">
+          <span>✅ Guaranteed replies</span>
+          <span>🧠 Local KB</span>
+          <span>🛡️ Access gate</span>
+        </div>
+      </div>
+    </section>
+
+    <a id="projects"></a>
+    <h3 class="section-title">Featured Projects</h3>
+    <div class="grid">
+      <!-- Project 1: AI Coach Bot -->
+      <article class="card">
+        <h4 style="margin:4px 0 6px">6FE AI Coach Bot</h4>
+        <p style="margin:0 0 10px; color:var(--muted)">GPT-powered Telegram assistant using a curated semantic KB (RAG). Arabic-first coaching with safe fallbacks.</p>
+        <div class="row">
+          <span class="pill">Semantic search (JSON index)</span>
+          <span class="pill">Failover chain</span>
+          <span class="pill">Redis disabled (noop)</span>
+          <span class="pill">PM2 on VPS</span>
+        </div>
+        <div class="kpis"><span>🧩 RAG</span><span>🗂️ KB Curation</span><span>🔒 Gate (optional)</span></div>
+        <div class="row" style="margin-top:12px">
+          <a class="btn primary" href="https://github.com/pyZac/6fe-ai-bot" target="_blank" rel="noopener">View Repo</a>
+          <!-- Optional demo link -->
+          <!-- <a class="btn ghost" href="#" target="_blank" rel="noopener">Demo Video</a> -->
+        </div>
+      </article>
+
+      <!-- Project 2: Subscription Bot -->
+      <article class="card">
+        <h4 style="margin:4px 0 6px">6FE Subscription Bot</h4>
+        <p style="margin:0 0 10px; color:var(--muted)">Automates Telegram group access via MySQL: removes expired users and re-adds them upon renewal.</p>
+        <div class="row">
+          <span class="pill">Telegraf</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">Cron-like loop</span>
+          <span class="pill">Multiple groups</span>
+        </div>
+        <div class="kpis"><span>⚙️ PM2</span><span>📊 Logs</span><span>🔐 Read-only DB</span></div>
+        <div class="row" style="margin-top:12px">
+          <a class="btn primary" href="https://github.com/pyZac/6FE-client-management" target="_blank" rel="noopener">View Repo</a>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="section-title">Tech Focus</h3>
+    <div class="panel">
+      <div class="list">
+        <span class="tag">AI assistants</span>
+        <span class="tag">RAG pipelines</span>
+        <span class="tag">Telegram automation</span>
+        <span class="tag">Knowledge curation</span>
+        <span class="tag">LLM guardrails</span>
+        <span class="tag">Observability</span>
+      </div>
+    </div>
+
+    <a id="contact"></a>
+    <h3 class="section-title">Contact</h3>
+    <div class="panel">
+      <p style="margin:0 0 6px">Interested in AI assistants, trading education tools, or automation?</p>
+      <div class="row">
+        <a class="btn" href="mailto:you@email.com">Email</a>
+        <a class="btn ghost" href="https://github.com/pyZac" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="mono" style="margin-top:12px; color:var(--muted)">Based in NL • Arabic & English</p>
+    </div>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> Saqer Terkawi — All rights reserved.</span>
+      <span class="mono">Built with HTML/CSS — hosted on GitHub Pages</span>
+    </footer>
+  </div>
+
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // theme toggle with localStorage
+    const toggle = document.getElementById('themeToggle');
+    const KEY = 'theme-pref';
+    const apply = (t)=>{
+      if(t==='light'){ document.documentElement.style.colorScheme='light'; document.documentElement.setAttribute('data-theme','light'); }
+      else{ document.documentElement.style.colorScheme='dark'; document.documentElement.setAttribute('data-theme','dark'); }
+    };
+    let pref = localStorage.getItem(KEY) || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    apply(pref);
+    toggle.addEventListener('click', ()=>{
+      pref = (pref==='light'?'dark':'light');
+      localStorage.setItem(KEY, pref);
+      apply(pref);
+    });
+  </script>
+</body>
+</html>
