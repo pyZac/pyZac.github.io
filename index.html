@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Saqer Terkawi — AI Bots & Automation</title>
-  <meta name="description" content="Portfolio: AI Bots, RAG pipelines, and automation projects for 6FE Platform."/>
+  <title>Saqer Terkawi — Data Analytics Portfolio</title>
+  <meta name="description" content="Portfolio: Data pipelines, NLP analytics, and subscription intelligence systems."/>
   <style>
     :root{
       --bg: #0b0d10;
@@ -94,8 +94,14 @@
       background:var(--glass); border:1px solid rgba(255,255,255,.16); color:var(--muted); font-size:12px}
     .list{display:flex; gap:8px; flex-wrap:wrap}
     .divider{height:1px; background:rgba(255,255,255,.12); margin:18px 0}
+    .stat{
+      text-align:center; padding:12px;
+    }
+    .stat-num{font-size:28px; font-weight:700; color:var(--brand); margin:0}
+    .stat-label{font-size:12px; color:var(--muted); margin:4px 0 0}
     @media (max-width: 880px){
       .hero{grid-template-columns: 1fr}
+      .grid{grid-template-columns: 1fr}
     }
   </style>
 </head>
@@ -103,115 +109,172 @@
   <div class="container">
     <nav class="nav">
       <div class="brand">
-        <div class="logo">⚡</div>
+        <div class="logo">📊</div>
         <h1>Saqer Terkawi</h1>
       </div>
       <div class="actions">
         <a class="btn ghost" href="https://github.com/pyZac" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
         <button class="toggle" id="themeToggle" title="Toggle theme">🌓</button>
       </div>
     </nav>
 
     <section class="hero">
       <div>
-        <span class="chip">AI Bots • RAG • Automation</span>
-        <h2 class="title">Building AI assistants & automation for the 6FE Platform</h2>
-        <p class="lead">Two production projects: an educational <span class="mono">AI Coach Bot</span> with semantic retrieval, and a <span class="mono">Subscription Manager</span> that controls Telegram group access from MySQL.</p>
+        <span class="chip">Data Analytics • ETL Pipelines • NLP</span>
+        <h2 class="title">Building data infrastructure and analytics systems</h2>
+        <p class="lead">Specializing in <span class="mono">subscription analytics</span>, <span class="mono">NLP data pipelines</span>, and <span class="mono">semantic search systems</span> — transforming raw data into actionable business insights.</p>
         <div class="cta">
-          <a class="btn primary" href="#projects">Explore Projects</a>
-          <a class="btn" href="#contact">Contact</a>
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Get in Touch</a>
         </div>
         <div class="row" style="margin-top:12px">
-          <span class="tag">Arabic-first</span>
-          <span class="tag">PM2 on VPS</span>
-          <span class="tag">Safe guardrails</span>
-          <span class="tag">Redis-ready</span>
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Vector Embeddings</span>
         </div>
       </div>
 
       <div class="panel">
-        <div class="list">
-          <span class="tag">Node.js</span>
-          <span class="tag">Telegraf</span>
-          <span class="tag">OpenAI GPT-4o</span>
-          <span class="tag">Embeddings</span>
-          <span class="tag">Cosine search</span>
-          <span class="tag">MySQL</span>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px">
+          <div class="stat">
+            <p class="stat-num">10K+</p>
+            <p class="stat-label">Messages<br/>Processed</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">89%</p>
+            <p class="stat-label">Search<br/>Accuracy</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">2.5K</p>
+            <p class="stat-label">Data Points<br/>Indexed</p>
+          </div>
         </div>
         <div class="divider"></div>
-        <p style="margin:0; color:var(--muted)">“Practical education, semantic context, robust fallbacks.”</p>
+        <p style="margin:0; color:var(--muted)">"Data-driven solutions for subscription intelligence and knowledge retrieval"</p>
         <div class="kpis">
-          <span>✅ Guaranteed replies</span>
-          <span>🧠 Local KB</span>
-          <span>🛡️ Access gate</span>
+          <span>📈 Analytics</span>
+          <span>🔍 ETL</span>
+          <span>🧠 NLP</span>
         </div>
       </div>
     </section>
 
     <a id="projects"></a>
-    <h3 class="section-title">Featured Projects</h3>
+    <h3 class="section-title">Featured Data Projects</h3>
     <div class="grid">
-      <!-- Project 1: AI Coach Bot -->
+      <!-- Project 1: Subscription Analytics -->
       <article class="card">
-        <h4 style="margin:4px 0 6px">6FE AI Coach Bot</h4>
-        <p style="margin:0 0 10px; color:var(--muted)">GPT-powered Telegram assistant using a curated semantic KB (RAG). Arabic-first coaching with safe fallbacks.</p>
+        <h4 style="margin:4px 0 6px">Subscription Analytics Pipeline</h4>
+        <p style="margin:0 0 10px; color:var(--muted)">End-to-end ETL infrastructure for subscription lifecycle analytics. Automated data extraction from operational systems with SQL-based exploratory analysis.</p>
         <div class="row">
-          <span class="pill">Semantic search (JSON index)</span>
-          <span class="pill">Failover chain</span>
-          <span class="pill">Redis disabled (noop)</span>
-          <span class="pill">PM2 on VPS</span>
+          <span class="pill">ETL Pipeline</span>
+          <span class="pill">SQL Analytics</span>
+          <span class="pill">Pandas</span>
+          <span class="pill">MySQL</span>
         </div>
-        <div class="kpis"><span>🧩 RAG</span><span>🗂️ KB Curation</span><span>🔒 Gate (optional)</span></div>
+        <div class="kpis">
+          <span>📊 500+ Active Members</span>
+          <span>💰 MRR Tracking</span>
+          <span>📉 Churn Analysis</span>
+        </div>
         <div class="row" style="margin-top:12px">
-          <a class="btn primary" href="https://github.com/pyZac/6fe-ai-bot" target="_blank" rel="noopener">View Repo</a>
-          <!-- Optional demo link -->
-          <!-- <a class="btn ghost" href="#" target="_blank" rel="noopener">Demo Video</a> -->
+          <a class="btn primary" href="https://github.com/pyZac/subscription-analytics-pipeline" target="_blank" rel="noopener">View Project</a>
         </div>
       </article>
 
-      <!-- Project 2: Subscription Bot -->
+      <!-- Project 2: NLP Knowledge Base -->
       <article class="card">
-        <h4 style="margin:4px 0 6px">6FE Subscription Bot</h4>
-        <p style="margin:0 0 10px; color:var(--muted)">Automates Telegram group access via MySQL: removes expired users and re-adds them upon renewal.</p>
+        <h4 style="margin:4px 0 6px">NLP Knowledge Retrieval System</h4>
+        <p style="margin:0 0 10px; color:var(--muted)">Complete NLP data pipeline: HTML parsing, Arabic text processing, vector embeddings, and semantic search with 89% retrieval accuracy.</p>
         <div class="row">
-          <span class="pill">Telegraf</span>
-          <span class="pill">MySQL</span>
-          <span class="pill">Cron-like loop</span>
-          <span class="pill">Multiple groups</span>
+          <span class="pill">NLP Pipeline</span>
+          <span class="pill">Vector Embeddings</span>
+          <span class="pill">Python</span>
+          <span class="pill">OpenAI API</span>
         </div>
-        <div class="kpis"><span>⚙️ PM2</span><span>📊 Logs</span><span>🔐 Read-only DB</span></div>
+        <div class="kpis">
+          <span>🔤 10K+ Messages</span>
+          <span>🎯 45ms Query Time</span>
+          <span>🌐 Arabic NLP</span>
+        </div>
         <div class="row" style="margin-top:12px">
-          <a class="btn primary" href="https://github.com/pyZac/6FE-client-management" target="_blank" rel="noopener">View Repo</a>
+          <a class="btn primary" href="https://github.com/pyZac/6fe-ai-bot" target="_blank" rel="noopener">View Project</a>
         </div>
       </article>
     </div>
 
-    <h3 class="section-title">Tech Focus</h3>
+    <h3 class="section-title">Technical Skills</h3>
     <div class="panel">
-      <div class="list">
-        <span class="tag">AI assistants</span>
-        <span class="tag">RAG pipelines</span>
-        <span class="tag">Telegram automation</span>
-        <span class="tag">Knowledge curation</span>
-        <span class="tag">LLM guardrails</span>
-        <span class="tag">Observability</span>
+      <div style="margin-bottom:18px">
+        <h5 style="margin:0 0 8px; font-size:14px; color:var(--muted)">Data Engineering & ETL</h5>
+        <div class="list">
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">SQL (MySQL)</span>
+          <span class="tag">Data Pipelines</span>
+          <span class="tag">ETL Automation</span>
+          <span class="tag">Node.js</span>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <h5 style="margin:0 0 8px; font-size:14px; color:var(--muted)">Analytics & Visualization</h5>
+        <div class="list">
+          <span class="tag">SQL Analytics</span>
+          <span class="tag">Cohort Analysis</span>
+          <span class="tag">Subscription Metrics</span>
+          <span class="tag">Jupyter Notebooks</span>
+          <span class="tag">Data Visualization</span>
+        </div>
+      </div>
+      <div>
+        <h5 style="margin:0 0 8px; font-size:14px; color:var(--muted)">NLP & Machine Learning</h5>
+        <div class="list">
+          <span class="tag">Vector Embeddings</span>
+          <span class="tag">Semantic Search</span>
+          <span class="tag">Text Processing</span>
+          <span class="tag">Arabic NLP</span>
+          <span class="tag">OpenAI API</span>
+          <span class="tag">Cosine Similarity</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title">Project Highlights</h3>
+    <div class="panel">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px">
+        <div>
+          <h5 style="margin:0 0 6px">Subscription Intelligence</h5>
+          <p style="margin:0; color:var(--muted); font-size:14px">Built automated ETL pipeline tracking subscription lifecycle, enabling cohort analysis and churn prediction for 500+ members</p>
+        </div>
+        <div>
+          <h5 style="margin:0 0 6px">Arabic Text Analytics</h5>
+          <p style="margin:0; color:var(--muted); font-size:14px">Developed NLP pipeline processing 10,000+ Arabic messages with 85% deduplication rate and normalized text for embeddings</p>
+        </div>
+        <div>
+          <h5 style="margin:0 0 6px">Vector Search Engine</h5>
+          <p style="margin:0; color:var(--muted); font-size:14px">Implemented semantic search system with 89% accuracy, 45ms query latency, and 2,500+ indexed knowledge entries</p>
+        </div>
       </div>
     </div>
 
     <a id="contact"></a>
-    <h3 class="section-title">Contact</h3>
+    <h3 class="section-title">Let's Connect</h3>
     <div class="panel">
-      <p style="margin:0 0 6px">Interested in AI assistants, trading education tools, or automation?</p>
+      <p style="margin:0 0 12px">I'm currently seeking opportunities in <strong>Data Analytics</strong> and open to discussing data projects, analytics challenges, or collaboration opportunities.</p>
       <div class="row">
-        <a class="btn" href="mailto:you@email.com">Email</a>
+        <a class="btn primary" href="mailto:your.email@example.com">Email Me</a>
         <a class="btn ghost" href="https://github.com/pyZac" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-      <p class="mono" style="margin-top:12px; color:var(--muted)">Based in NL • Arabic & English</p>
+      <div class="divider"></div>
+      <p class="mono" style="margin:0; color:var(--muted)">📍 Bulgaria • Economics & Business Administration graduate • Transitioning to Data Analytics</p>
     </div>
 
     <footer class="footer">
-      <span>© <span id="y"></span> Saqer Terkawi — All rights reserved.</span>
-      <span class="mono">Built with HTML/CSS — hosted on GitHub Pages</span>
+      <span>© <span id="y"></span> Saqer Terkawi — Data Analytics Portfolio</span>
+      <span class="mono">Built with HTML/CSS • Hosted on GitHub Pages</span>
     </footer>
   </div>
 
