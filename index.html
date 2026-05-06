@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Saqer Terkawi — Data Analytics Portfolio</title>
-  <meta name="description" content="Portfolio: Data pipelines, NLP analytics, and subscription intelligence systems."/>
+  <title>Saqer Terkawi — Data & AI Portfolio</title>
+  <meta name="description" content="Portfolio: Data pipelines, NLP analytics, and AI systems."/>
   <style>
     :root{
       --bg: #0b0d10;
@@ -76,14 +76,14 @@
       display:grid; grid-template-columns: repeat(2,1fr); gap:18px; margin-top:28px
     }
     .card{
-      background: var(--card); border:1px solid rgba(255,255,255,.12); border-radius:18px; padding:18px;
+      background: var(--card); border:1px solid rgba(255,255,255,.12); border-radius:18px; padding:20px;
       transition:.25s transform, .25s box-shadow, .25s border; position:relative; overflow:hidden
     }
     .card:hover{transform:translateY(-3px); box-shadow: var(--shadow); border-color: rgba(124,92,255,.35)}
     .pill{display:inline-block; font-size:12px; color:var(--muted); border:1px solid rgba(255,255,255,.18);
       border-radius:999px; padding:4px 10px; margin:6px 6px 10px 0}
     .row{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 4px}
-    .kpis{display:flex; gap:16px; margin-top:8px; color:var(--muted); font-size:13px}
+    .kpis{display:flex; gap:16px; margin-top:8px; color:var(--muted); font-size:13px; flex-wrap:wrap}
     .kpis span{display:flex; gap:6px; align-items:center}
     .section-title{margin:36px 0 10px; font-size:20px}
     .footer{
@@ -94,11 +94,24 @@
       background:var(--glass); border:1px solid rgba(255,255,255,.16); color:var(--muted); font-size:12px}
     .list{display:flex; gap:8px; flex-wrap:wrap}
     .divider{height:1px; background:rgba(255,255,255,.12); margin:18px 0}
-    .stat{
-      text-align:center; padding:12px;
-    }
+    .stat{text-align:center; padding:12px}
     .stat-num{font-size:28px; font-weight:700; color:var(--brand); margin:0}
     .stat-label{font-size:12px; color:var(--muted); margin:4px 0 0}
+    .what-i-learned{
+      margin-top:14px; padding:12px 14px;
+      border-left: 3px solid var(--brand-2);
+      background: rgba(0,209,178,.06);
+      border-radius: 0 10px 10px 0;
+      font-size:13px; color:var(--muted);
+    }
+    .what-i-learned strong{ color: var(--brand-2); display:block; margin-bottom:4px; font-size:12px; text-transform:uppercase; letter-spacing:.5px}
+    .step{
+      display:flex; gap:10px; align-items:flex-start; margin:8px 0; font-size:13px; color:var(--muted)
+    }
+    .step-num{
+      min-width:22px; height:22px; border-radius:50%; background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color:#0b0d10; font-size:11px; font-weight:700; display:grid; place-items:center; flex-shrink:0; margin-top:2px
+    }
     @media (max-width: 880px){
       .hero{grid-template-columns: 1fr}
       .grid{grid-template-columns: 1fr}
@@ -114,16 +127,15 @@
       </div>
       <div class="actions">
         <a class="btn ghost" href="https://github.com/pyZac" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
         <button class="toggle" id="themeToggle" title="Toggle theme">🌓</button>
       </div>
     </nav>
 
     <section class="hero">
       <div>
-        <span class="chip">Data Analytics • ETL Pipelines • NLP</span>
-        <h2 class="title">Building data infrastructure and analytics systems</h2>
-        <p class="lead">Specializing in <span class="mono">subscription analytics</span>, <span class="mono">NLP data pipelines</span>, and transforming raw data into actionable business insights.</p>
+        <span class="chip">Data & AI · ETL Pipelines · LLM Integration</span>
+        <h2 class="title">Building data pipelines and AI-powered systems</h2>
+        <p class="lead">M.Sc. student in Management & Digital Technology at TUM Heilbronn. Hands-on experience connecting APIs, structuring raw data, and integrating LLMs into working applications.</p>
         <div class="cta">
           <a class="btn primary" href="#projects">View Projects</a>
           <a class="btn" href="#contact">Get in Touch</a>
@@ -131,153 +143,193 @@
         <div class="row" style="margin-top:12px">
           <span class="tag">Python</span>
           <span class="tag">SQL</span>
-          <span class="tag">Pandas</span>
-          <span class="tag">Vector Embeddings</span>
+          <span class="tag">LLM Integration</span>
+          <span class="tag">RAG Systems</span>
+          <span class="tag">ETL</span>
         </div>
       </div>
 
       <div class="panel">
         <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px">
           <div class="stat">
-            <p class="stat-num">10K+</p>
-            <p class="stat-label">Messages<br/>Processed</p>
+            <p class="stat-num">2</p>
+            <p class="stat-label">End-to-end<br/>Projects</p>
           </div>
           <div class="stat">
-            <p class="stat-num">89%</p>
-            <p class="stat-label">Search<br/>Accuracy</p>
+            <p class="stat-num">3+</p>
+            <p class="stat-label">APIs<br/>Integrated</p>
           </div>
           <div class="stat">
-            <p class="stat-num">2.5K</p>
-            <p class="stat-label">Data Points<br/>Indexed</p>
+            <p class="stat-num">RAG</p>
+            <p class="stat-label">Knowledge<br/>Base Built</p>
           </div>
         </div>
         <div class="divider"></div>
-        <p style="margin:0; color:var(--muted)">"Data-driven solutions for subscription intelligence and knowledge retrieval"</p>
+        <p style="margin:0; color:var(--muted)">"Learning by building — every project is a real system that solves a real problem."</p>
         <div class="kpis">
-          <span>📈 Analytics</span>
-          <span>🔍 ETL</span>
-          <span>🧠 NLP</span>
+          <span>🔧 Automation</span>
+          <span>🧠 LLM / RAG</span>
+          <span>📊 Data Pipelines</span>
         </div>
       </div>
     </section>
 
     <a id="projects"></a>
-    <h3 class="section-title">Featured Data Projects</h3>
+    <h3 class="section-title">Featured Projects</h3>
     <div class="grid">
-      <!-- Project 1: Subscription Analytics -->
+
+      <!-- Project 1: Subscription Bot -->
       <article class="card">
-        <h4 style="margin:4px 0 6px">Subscription Analytics Pipeline</h4>
-        <p style="margin:0 0 10px; color:var(--muted)">End-to-end ETL infrastructure for subscription lifecycle analytics. Automated data extraction from operational systems with SQL-based exploratory analysis.</p>
-        <div class="row">
-          <span class="pill">ETL Pipeline</span>
-          <span class="pill">SQL Analytics</span>
-          <span class="pill">Pandas</span>
+        <h4 style="margin:4px 0 6px">Subscription Automation Bot</h4>
+        <p style="margin:0 0 10px; color:var(--muted)">
+          A Telegram bot that automates the full subscription lifecycle for an online education platform —
+          built end-to-end with JavaScript, Stripe, and MySQL.
+        </p>
+
+        <div class="what-i-learned">
+          <strong>How it works</strong>
+          <div class="step"><div class="step-num">1</div><span>Members interact with the Telegram bot to renew their subscription, check their status, or get support — no manual admin needed.</span></div>
+          <div class="step"><div class="step-num">2</div><span>Stripe webhooks fire on payment events (activation, renewal, cancellation) and the bot responds automatically — updating the MySQL database in real time.</span></div>
+          <div class="step"><div class="step-num">3</div><span>When a subscription expires, the bot automatically removes the member from the relevant Telegram groups.</span></div>
+          <div class="step"><div class="step-num">4</div><span>All subscription data is stored in MySQL, creating a structured history for analysis and future automation.</span></div>
+        </div>
+
+        <div class="row" style="margin-top:14px">
+          <span class="pill">Telegram Bot API</span>
+          <span class="pill">Stripe Webhooks</span>
           <span class="pill">MySQL</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">Automation</span>
         </div>
         <div class="kpis">
-          <span>📊 20+ Active Members</span>
-          <span>💰 MRR Tracking</span>
-          <span>📉 Churn Analysis</span>
+          <span>🤖 Fully Automated</span>
+          <span>💳 Stripe Integrated</span>
+          <span>🗄️ MySQL Backend</span>
         </div>
         <div class="row" style="margin-top:12px">
-          <a class="btn primary" href="https://github.com/pyZac/subscription-analytics-pipeline" target="_blank" rel="noopener">View Project</a>
+          <a class="btn primary" href="https://github.com/pyZac/subscription-analytics-pipeline" target="_blank" rel="noopener">View on GitHub</a>
         </div>
       </article>
 
-      <!-- Project 2: NLP Knowledge Base -->
+      <!-- Project 2: RAG Knowledge Base -->
       <article class="card">
-        <h4 style="margin:4px 0 6px">NLP Knowledge Retrieval System</h4>
-        <p style="margin:0 0 10px; color:var(--muted)">Complete NLP data pipeline: HTML parsing, Arabic text processing, vector embeddings, and semantic search with 89% retrieval accuracy.</p>
-        <div class="row">
-          <span class="pill">NLP Pipeline</span>
-          <span class="pill">Vector Embeddings</span>
+        <h4 style="margin:4px 0 6px">RAG Knowledge Base (Python + LLM)</h4>
+        <p style="margin:0 0 10px; color:var(--muted)">
+          A context-aware Q&A system built from raw Telegram chat history — using Python for data processing
+          and an LLM to structure and retrieve knowledge.
+        </p>
+
+        <div class="what-i-learned">
+          <strong>How it works</strong>
+          <div class="step"><div class="step-num">1</div><span>Parsed raw Telegram chat export files with Python to extract and filter relevant messages from thousands of conversations.</span></div>
+          <div class="step"><div class="step-num">2</div><span>Used an LLM to categorize the messages, identify useful patterns, and generate structured knowledge entries — turning raw chat into organized information.</span></div>
+          <div class="step"><div class="step-num">3</div><span>Built a knowledge base from the processed output and connected it to an LLM so users can ask questions and get answers grounded in real company data — not just generic model output.</span></div>
+          <div class="step"><div class="step-num">4</div><span>This is a practical introduction to the full RAG pipeline: raw data → cleaning → LLM-assisted structuring → retrieval-augmented generation.</span></div>
+        </div>
+
+        <div class="row" style="margin-top:14px">
           <span class="pill">Python</span>
-          <span class="pill">OpenAI API</span>
+          <span class="pill">LLM Integration</span>
+          <span class="pill">RAG</span>
+          <span class="pill">NLP</span>
+          <span class="pill">Prompt Engineering</span>
         </div>
         <div class="kpis">
-          <span>🔤 10K+ Messages</span>
-          <span>🎯 45ms Query Time</span>
-          <span>🌐 Arabic NLP</span>
+          <span>💬 Telegram Data</span>
+          <span>🧠 LLM-Structured</span>
+          <span>🔍 RAG Retrieval</span>
         </div>
         <div class="row" style="margin-top:12px">
-          <a class="btn primary" href="https://github.com/pyZac/6fe-ai-bot" target="_blank" rel="noopener">View Project</a>
+          <a class="btn primary" href="https://github.com/pyZac/6fe-ai-bot" target="_blank" rel="noopener">View on GitHub</a>
         </div>
       </article>
+
+      <!-- Project 3: Datathon -->
+      <article class="card">
+        <h4 style="margin:4px 0 6px">Toxicity Dataset — HerWILL Datathon 2026</h4>
+        <p style="margin:0 0 10px; color:var(--muted)">
+          Volunteer data collection and LLM-assisted classification project to build a labeled dataset
+          for future toxicity detection model training.
+        </p>
+
+        <div class="what-i-learned">
+          <strong>How it works</strong>
+          <div class="step"><div class="step-num">1</div><span>Collected raw text data from Facebook pages using JavaScript scraping scripts, then cleaned and prepared it for annotation.</span></div>
+          <div class="step"><div class="step-num">2</div><span>Used an LLM to classify each entry into toxic, partially toxic, or non-toxic — then reviewed the outputs and iteratively refined the prompts to improve classification quality.</span></div>
+          <div class="step"><div class="step-num">3</div><span>The final labeled dataset is intended to be used for training toxicity detection models — contributing to responsible AI development.</span></div>
+        </div>
+
+        <div class="row" style="margin-top:14px">
+          <span class="pill">Python</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">LLM Classification</span>
+          <span class="pill">Prompt Engineering</span>
+          <span class="pill">Dataset Building</span>
+        </div>
+        <div class="kpis">
+          <span>🏷️ Labeled Dataset</span>
+          <span>🤖 LLM Classification</span>
+          <span>🌐 Arabic Text</span>
+        </div>
+      </article>
+
     </div>
 
     <h3 class="section-title">Technical Skills</h3>
     <div class="panel">
       <div style="margin-bottom:18px">
-        <h5 style="margin:0 0 8px; font-size:14px; color:var(--muted)">Data Engineering & ETL</h5>
+        <h5 style="margin:0 0 8px; font-size:14px; color:var(--muted)">Programming & Data</h5>
         <div class="list">
           <span class="tag">Python</span>
-          <span class="tag">Pandas</span>
-          <span class="tag">SQL (MySQL)</span>
-          <span class="tag">Data Pipelines</span>
-          <span class="tag">ETL Automation</span>
+          <span class="tag">SQL & MySQL</span>
+          <span class="tag">ETL Pipelines</span>
+          <span class="tag">Web Scraping</span>
+          <span class="tag">Data Cleaning</span>
+          <span class="tag">Git & Bash</span>
         </div>
       </div>
       <div style="margin-bottom:18px">
-        <h5 style="margin:0 0 8px; font-size:14px; color:var(--muted)">Analytics & Visualization</h5>
+        <h5 style="margin:0 0 8px; font-size:14px; color:var(--muted)">AI & NLP</h5>
         <div class="list">
-          <span class="tag">SQL Analytics</span>
-          <span class="tag">Jupyter Notebooks</span>
-          <span class="tag">Data Visualization</span>
+          <span class="tag">LLM Integration</span>
+          <span class="tag">RAG Systems</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">Text Processing</span>
+          <span class="tag">Dataset Labeling</span>
         </div>
       </div>
       <div>
-        <h5 style="margin:0 0 8px; font-size:14px; color:var(--muted)">APIs & Integration</h5>
+        <h5 style="margin:0 0 8px; font-size:14px; color:var(--muted)">Infrastructure & APIs</h5>
         <div class="list">
-          <span class="tag">LLM Integration</span>
           <span class="tag">Telegram Bot API</span>
-          <span class="tag">DB Integration</span>
-          <span class="tag">AutomationScripts</span>
-        </div>
-      </div>
-    </div>
-
-    <h3 class="section-title">Project Highlights</h3>
-    <div class="panel">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px">
-        <div>
-          <h5 style="margin:0 0 6px">Subscription Intelligence</h5>
-          <p style="margin:0; color:var(--muted); font-size:14px">Built automated ETL pipeline tracking subscription lifecycle, enabling cohort analysis and churn prediction for 500+ members</p>
-        </div>
-        <div>
-          <h5 style="margin:0 0 6px">Arabic Text Analytics</h5>
-          <p style="margin:0; color:var(--muted); font-size:14px">Developed NLP pipeline processing 10,000+ Arabic messages with 85% deduplication rate and normalized text for embeddings</p>
-        </div>
-        <div>
-          <h5 style="margin:0 0 6px">Vector Search Engine</h5>
-          <p style="margin:0; color:var(--muted); font-size:14px">Implemented semantic search system with 89% accuracy, 45ms query latency, and 2,500+ indexed knowledge entries</p>
+          <span class="tag">Stripe API</span>
+          <span class="tag">Linux / VPS</span>
+          <span class="tag">PM2</span>
+          <span class="tag">cPanel / WHM</span>
         </div>
       </div>
     </div>
 
     <a id="contact"></a>
-    <h3 class="section-title">Let's Connect</h3>
+    <h3 class="section-title">Get in Touch</h3>
     <div class="panel">
-      <p style="margin:0 0 12px">I'm currently seeking opportunities in <strong>Data Analytics</strong> and open to discussing data projects, analytics challenges, or collaboration opportunities.</p>
+      <p style="margin:0 0 12px">I'm currently seeking <strong>HiWi or working student positions</strong> in Data & AI at TUM Heilbronn or the Bildungscampus. Open to research support, data projects, and applied AI work.</p>
       <div class="row">
-        <a class="btn primary" href="mailto:your.saqerterkawi@gmail.com">Email Me</a>
+        <a class="btn primary" href="mailto:terkawisaqer@gmail.com">Email Me</a>
         <a class="btn ghost" href="https://github.com/pyZac" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <div class="divider"></div>
-      <p class="mono" style="margin:0; color:var(--muted)">📍 Syria • Economics & Business Administration graduate • Transitioning to Data Analytics</p>
+      <p class="mono" style="margin:0; color:var(--muted)">📍 Heilbronn, Germany · M.Sc. Management & Digital Technology — TUM · Semester 1</p>
     </div>
 
     <footer class="footer">
-      <span>© <span id="y"></span> Saqer Terkawi — Data Analytics Portfolio</span>
-      <span class="mono">Built with HTML/CSS • Hosted on GitHub Pages</span>
+      <span>© <span id="y"></span> Saqer Terkawi — Data & AI Portfolio</span>
+      <span class="mono">Built with HTML/CSS · Hosted on GitHub Pages</span>
     </footer>
   </div>
 
   <script>
-    // year
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // theme toggle with localStorage
     const toggle = document.getElementById('themeToggle');
     const KEY = 'theme-pref';
     const apply = (t)=>{
